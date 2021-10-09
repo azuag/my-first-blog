@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<html dir="ltr" class="uk-notouch" lang="en-gb" style="height:100%">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Control de producción FIS</title>
+      <!--<link rel="shortcut icon" href="files/img/favicon.ico" type="image/x-icon">-->
+      <!--<link rel="apple-touch-icon-precomposed" href="files/img/apple-touch-icon.png">-->
+      <link rel="stylesheet" href="files/uikit.css">
+      <link rel="stylesheet" type="text/css" href="files/style.css" />
+      <link href="files/intro/introjs.css" rel="stylesheet">
+      <style type="text/css">
+         .importantRulew{
+         background-color:#eef248 !important;
+         border:8px solid #146CE0;
+         }
+         .forLastStep {
+         font-weight: bold;
+         }
+         .customDefault { 
+         color: gray;
+         }
+         .customDefault .introjs-skipbutton {
+         border-radius: 0;
+         color: red;
+         }
+      </style>
+   </head>
+   <body style="height:100%">
+      <div  id="header">	  
+      </div>
+	  <br>
+	  <div class="uk-grid" data-uk-grid-margin="">
+         <div class="uk-width-1-1 uk-row-first ">
+            <!--<h1 class="uk-heading-large">Reportes de Indicadores</h1> -->
+            <p class="uk-text-large uk-text-center uk-text-bold uk-text-badge-purple uk-text-primary-banner">Vicepresidencia de Produccion y Logistica                                     
+            </p>								           
+         </div>
+      </div>
+      <div id="editable" class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom uk-container-large" data-step="1" 
+         data-intro="Bienvenido al nuevo portal de la Vicepresidencia de Producción y Logística.">
+         <div class="uk-grid" data-uk-grid-margin="">
+            <div class="uk-width-1-1 uk-row-first" data-step="2" 
+               data-intro="Tips: Ya no es necesario utilizar la tecla F5 para refrescar el reporte, basta con cerrarlo y volver a abrirlo">
+               <ul class="uk-subnav uk-subnav-pill " data-step="3" 
+                  data-intro="Los reportes se clasifican por medio de gerencias, cada sección contiene reportes que se relacionen con la gerencia correspondiente" 
+                  data-uk-switcher="{connect:'#switcher-content',animation: 'scale'}">
+                  <li class="uk-active uk-text-bold" aria-expanded="true"><a href="#">Logistica Operativa</a></li>
+                  <li aria-expanded="false" class="uk-text-bold"><a href="#">Disposición</a></li>
+                  <li aria-expanded="false" data-step="4" 
+                     data-intro="Por ejemplo, los reportes de la sección Tráfico y Transporte son relacionados a esta gerencia" 
+                     class="uk-text-bold"><a href="#">Tráfico y Transporte</a></li>
+                  <li aria-expanded="false" class="uk-text-bold"><a href="#">CKD</a></li>
+                  <li aria-expanded="false" class="uk-text-bold"><a href="#">TAED</a></li>
+                  <li aria-expanded="false" class="uk-text-bold"><a href="#">Control de Prod. FIS</a></li>
+                  <li aria-expanded="false" class="uk-text-bold"><a href="#">Temas Especiales</a></li>
+               </ul>
+               <ul id="switcher-content" class="uk-switcher">
+                  <!--Inicia Logistica Operativa-->
+                  <li class="uk-active" aria-hidden="false">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                        <div class="uk-width-medium-1-4 uk-row-first uk-height-max-small">
+                           <div id='log_op_sfm_digital' class="uk-thumbnail uk-overlay-hover" data-uk-modal="{target:'#modal-log_op_sfm_digital'}" 
+                              onclick="random('pdf-log_op_sfm_digital', 'file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/01.Log.Operativa/SFMDigital.pdf', 'log_op_sfm_digital');">
+                              <figure class="uk-overlay">
+                                 <img src="img/log_op_sfm_digital.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-log-oper">
+                                 SFM Digital
+                              </div>
+                           </div>
+                           <div id="modal-log_op_sfm_digital" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-log_op_sfm_digital' type="application/pdf" style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just
+                                       <a href="file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/01.Log.Operativa/SFMDigital.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+						<!--
+                        <div class="uk-width-medium-1-4">
+                           <div  id='r2' class="uk-thumbnail uk-overlay-hover" data-uk-modal="{target:'#modal-2'}" 
+                              onclick="random('pdf-2', 'http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/Finish.pdf', 'r2');">
+                              <figure class="uk-overlay">
+                                 <img src="img/1.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-log-oper">Cockpit Finish</div>
+                           </div>
+                           <div id="modal-2" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-2' type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/Finish.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+						-->
+                    </div>
+                  </li>
+                  <!--Inicia Disposición-->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                        <div class="uk-width-medium-1-4 uk-row-first">
+                           <div id='criticos'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-criticos'}"
+                              onclick="random('pdf-criticos', 'file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/02.Disposicion/CRITICOS.pdf', 'criticos');">
+                              <figure class="uk-overlay">
+                                 <img src="img/criticos.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-dispo">Críticos</div>
+                           </div>
+                           <div id="modal-criticos" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-criticos'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/02.Disposicion/CRITICOS.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+						<!--
+                        <div class="uk-width-medium-1-4">
+                           <div id='r6'   class="uk-thumbnail uk-overlay-hover" data-uk-modal="{target:'#modal-6'}"
+                              onclick="random('pdf-6', 'file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/02.Disposicion/CRITICOS.pdf', 'r6');">
+                              <figure class="uk-overlay">
+                                 <img src="img/5.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-dispo">Procesos PC7</div>
+                           </div>
+                           <div id="modal-6" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-6'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/02.Disposicion/CRITICOS.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+						-->
+                    </div>
+                  </li>
+                  <!--Inicia Tráfico y Transporte  -->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                        <div class="uk-width-medium-1-4 uk-row-first">
+                           <div id='arribos'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-arribos'}"
+                              onclick="random('pdf-arribos', 'file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/03.Trafico.Transporte/Arribos.pdf', 'arribos');">
+                              <figure class="uk-overlay">
+                                 <img src="img/arribos.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-tt">Arribos</div>
+                           </div>
+                           <div id="modal-arribos" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-arribos' type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/03.Trafico.Transporte/Arribos.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </li>
+                  <!-- Inicia CKD-->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                      
+                        <div class="uk-width-medium-1-4">
+                           <div id='r61'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-61'}"
+                              onclick="random('pdf-61', 'http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/I100M100.pdf', 'r61');">
+                              <figure class="uk-overlay">
+                                 <img src="img/18.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-ckd">Ejemplo CKD</div>
+                           </div>
+                           <div id="modal-61" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-61'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/I100M100.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>                        
+                          
+					</div>
+                  </li>
+                  <!-- Inicia TAED-->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                        <div class="uk-width-medium-1-4">
+                           <div id='r23'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-23'}"
+                              onclick="random('pdf-23', 'http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/Control_Operativo_KSII.pdf', 'r23');">
+                              <figure class="uk-overlay">
+                                 <img src="img/22.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-taed">Ejemplo TAED</div>
+                           </div>
+                           <div id="modal-23" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-23'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="http://10.148.10.142/reportesfis/Reportes_Produccion_FIS/CockpitMonitorPDF/Control_Operativo_KSII.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+                        
+					</div>
+                  </li>
+                  <!-- Inicia Control de Producción FIS-->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                       
+                        <div class="uk-width-medium-1-4">
+                           <div id='r62'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-62'}"
+                              onclick="random('pdf-62', 'file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/07.Control.Produccion/S3_Indicadores_PC7_PC8_x_Hora.pdf', 'r62');">
+                              <figure class="uk-overlay">
+							  
+                                 <img src="img/18.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-cont-fis">Ejemplo Control de Produccion</div>
+                           </div>
+                           <div id="modal-62" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-62'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="file://///mxvwmxpusfs001/mafu/A.Portal.Direccion/07.Control.Produccion/S3_Indicadores_PC7_PC8_x_Hora.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+                        
+                    </div>
+                  </li>
+                  <!-- Inicia Temas Especiales-->
+                  <li aria-hidden="true" class="">
+                     <div class="uk-grid" data-uk-grid-margin="">
+                        <div class="uk-width-medium-1-4">
+                           <div id='topfapintpc5'  class="uk-thumbnail uk-overlay-hover"  data-uk-modal="{target:'#modal-topfapintpc5'}"
+                              onclick="random('pdf-topfapintpc5', 'http://10.148.112.123:44370/ViewReports/Pintura_Top_Fallas.pdf', 'topfapintpc5');">
+                              <figure class="uk-overlay">
+                                 <img src="img/topfapintpc5.png" alt="" width="600" height="400">
+                                 <figcaption  class="uk-overlay-panel uk-overlay-background uk-overlay-fade"></figcaption>
+                              </figure>
+                              <div class="uk-text-center uk-card-body uk-text-bold uk-text-primary-temas-espec">Ejemplo Especiales</div>
+                           </div>
+                           <div id="modal-topfapintpc5" class="uk-modal">
+                              <div class="uk-modal-dialog uk-modal-dialog-lightbox">
+                                 <button id="cerrar" name="cerrar" class="uk-button uk-button-danger uk-align-right uk-text-bolder" type="button" onclick="cerrar();" >Regresar</button>
+                                 <object id='pdf-topfapintpc5'  type="application/pdf"  style="width: 100%;height: 100%;">
+                                    <p>
+                                       It appears your Web browser is not configured to display PDF files. No worries, just 
+                                       <a href="http://10.148.112.123:44370/ViewReports/Pintura_Top_Fallas.pdf">click here to download the PDF file.</a>
+                                    </p>
+                                 </object>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        
+                     </div>
+                  </li>
+            </div>
+         </div>
+         </ul>
+      </div>
+      <div class="uk-grid" data-uk-grid-margin="">
+         <div class="uk-width-1-1 uk-row-first uk-text-badge-purple ">
+            <!--<h1 class="uk-heading-large">Reportes de Indicadores</h1> -->
+            <p class="uk-text-large uk-text-center uk-text-badge-purple uk-text-"><a class="uk-text-small uk-text-center uk-text-badge-purple" href="javascript:void(0);" 
+               onclick="javascript:introJs().setOption('tooltipClass', 'customDefault').start();"><u>AYUDA</u></a>
+            </p>
+			 <p class="uk-text-medium uk-text-center uk-text-bold uk-text-badge-purple uk-text-danger">*Para cerrar un pdf, presione la tecla ESC</p>
+         </div>
+      </div>
+	  
+      
+	  
+      <script src="files/jquery.js"></script>        
+      <script src="files/uikit.js"></script>
+      <script type="text/javascript" src="files/intro/intro.js"></script>
+      <script type="text/javascript">
+         function cerrar() {
+             var esc = $.Event("keydown", {keyCode: 27});
+             $("body").trigger(esc);
+         }
+         function random(id, path, idelement) {
+             $("#" + id).attr({
+                 data: path + "?" + Math.random()
+             });
+         
+         
+             $('div').removeClass('importantRulew');
+             $("#" + idelement).addClass('importantRulew');
+         //                                                     $("#" + id).addClass('importantRuler');
+         }
+         function random2(id, path, idelement) {
+             $("#" + id).attr({
+                 data: path + "?" + Math.random()
+             });
+             $('div').removeClass('importantRulew');
+             $("#" + idelement).addClass('importantRulew');
+         //                                                     $("#" + id).addClass('importantRuler');
+         }
+      </script>
+   </body>
+</html>
+
